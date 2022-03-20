@@ -2,10 +2,15 @@
 
 #include <stdexcept>
 
+void usage(){
+	fprintf(stderr, "Usage:\n\t./ncmdump [FILE1] [FILE2] ...\n");
+}
+
 int main(int argc, char *argv[]) {
 
 	if (argc <= 1) {
-		std::cout << "please input file path!" << std::endl;
+		// std::cout << "please input file path!" << std::endl;
+		usage();
 		return 1;
 	}
 
